@@ -9,12 +9,12 @@
 include $(TOPDIR)/rules.mk
 PKG_NAME:=python-spidev
 PKG_VERSION:=4.0.1
-PKG_RELEASE:=2
+PKG_RELEASE:=3
 
 
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_VERSION:=HEAD
-PKG_SOURCE_URL:=https://github.com/OnionIoT/python-spidev.git
+PKG_SOURCE_URL:=https://github.com/Baui1024/python-spidev.git
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION)-$(PKG_RELEASE).tar.gz
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)
