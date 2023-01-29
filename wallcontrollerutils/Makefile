@@ -18,7 +18,7 @@ define Package/python3-wallcontrollerutils
 	CATEGORY:=Languages
 	SUBMENU:=Python
 	TITLE:=Python3 module for fast conversion
-	DEPENDS:=+python3-base
+	DEPENDS:=+python3
 endef
 
 define Package/python3-wallcontrollerutils/description
@@ -30,10 +30,9 @@ TARGET_CFLAGS += $(FPIC)
 TARGET_LIBS += -l m
 
 PYTHON3_VERSION = 3.9
-TARGET_PYTHON3_INC += "-I$(STAGING_DIR)/usr/include/python$(PYTHON3_VERSION)/"
+TARGET_PYTHON3_INC += -I$(STAGING_DIR)/usr/include/python$(PYTHON3_VERSION)/
 
 define Build/Compile
-	
 	$(MAKE) -C $(PKG_BUILD_DIR) wipe
 	
 	$(MAKE) -C $(PKG_BUILD_DIR) \
